@@ -63,7 +63,7 @@ const gatherRemainder = () => {
     const answer1 = getNumberInput("What were the result for the remainder of 3? ");
     const answer2 = getNumberInput("What were the result for the remainder of 5? ");
     const answer3 = getNumberInput("What were the result for the remainder of 7? ");
-    return { answer1, answer2, answer3 };
+    return {answer1, answer2, answer3};
 };
 
 const printRemainders = (age) => {
