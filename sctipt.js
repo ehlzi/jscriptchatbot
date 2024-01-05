@@ -130,17 +130,15 @@ const quizLogic = (name) => {
 
     do {
         let selector = getNumberSelector();
+        let correctAnswer = 1;
 
-        if (selector === 1) {
+        if (selector === correctAnswer) {
             console.log("Echo - correct!");
-            break;
-        } else if (selector === 2) {
-            console.log("Cloud - not quite!");
-        } else if (selector === 3) {
-            console.log("Ghost - not quite!");
-        } else if (selector === 4) {
-            console.log("Whisper - not quite!");
+            break; // Exit the loop when the correct answer is selected.
+        } else {
+            console.log("Not quite! Please, try again.");
         }
+
     } while (true);
 
     gameSelector(name);
