@@ -1,13 +1,13 @@
 const prompt = require('prompt-sync')();
 
-function gatherName() {
+let gatherName = () => {
     let year = new Date().getFullYear();
     console.log("Hello! My name is Aid.");
     console.log("I was created in " + year + "!");
     return prompt("Please, remind me of your name: ");
 }
 
-function gatherRemainder(name) {
+let gatherRemainder = (name) => {
     console.log("What a great name you have, " + name + "!");
     do {
         let num = prompt("I'm going to guess how old you are " + name + ", please type your age and then repeat to me the remainders receive: ");
@@ -25,7 +25,7 @@ function gatherRemainder(name) {
     } while(true);
 }
 
-function guessAge() {
+let guessAge = () => {
     let answer1 = prompt("What were the result for the remainder of 3? ");
     let answer2 = prompt("What were the result for the remainder of 5? ");
     let answer3 = prompt("What were the result for the remainder of 7? ");
@@ -33,7 +33,7 @@ function guessAge() {
     return (answer1 * 70 + answer2 * 21 + answer3 * 15) % 105;
 }
 
-function selectResult() {
+let selectResult = () => {
     let name = gatherName();
     gatherRemainder(name);
     let age = guessAge();
